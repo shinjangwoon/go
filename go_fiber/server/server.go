@@ -1,7 +1,7 @@
 package main
 
 import (
-	"example/hello/database"
+	"github.com/shinjangwoon/go/src/go_study/database"
 
 	"github.com/gofiber/fiber/v2"
 )

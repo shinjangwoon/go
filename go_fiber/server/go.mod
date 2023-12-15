@@ -1,4 +1,4 @@
-module example/hello
+module github.com/shinjangwoon/go/src/go_study
 
 go 1.21.4
 
