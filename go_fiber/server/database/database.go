@@ -3,7 +3,7 @@ package database
 import (
 	"log"
 
-	"github.com/shinjangwoon/go/src/go_study/model"
+	"github.com/shinjangwoon/go/go_fiber/model"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -12,7 +12,7 @@ import (
 var DBConn *gorm.DB
 
 func ConnectDB() {
-	dsn := "root:woon@tcp(127.0.0.1:3306)/" + dbname + "?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:woon@tcp(127.0.0.1:3306)/go_db?charset=utf8mb4&parseTime=True&loc=Local"
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Error),

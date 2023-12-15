@@ -1,4 +1,4 @@
-module github.com/shinjangwoon/go/src/go_study
+module github.com/shinjangwoon/go/go_fiber
 
 go 1.21.4
 
