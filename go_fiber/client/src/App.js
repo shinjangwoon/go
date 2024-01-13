@@ -1,15 +1,19 @@
-import { Container, Row, Col } from "react-bootstrap"
+import {Routes, Route} from "react-router-dom"
+
+
+import "./App.css";
+import Home from "./page/Home";
+import Blog from "./page/Blog";
 
 function App() {
+
   return (
-    <Container>
-      <Row>
-        <Col xs="12 py-2">
-          <h1 className="text-center ">React Application with Go fiber Backend</h1>
-        </Col>
-      </Row>
-    </Container>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/blog/:id" element={<Blog />} />
+
+    </Routes>
   );
-}
+};
 
 export default App;

@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 	"github.com/shinjangwoon/go/go_fiber/database"
@@ -32,6 +33,13 @@ func main() {
 	defer sqlDb.Close()
 
 	app := fiber.New()
+
+	// Or extend your config for customization
+
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+		AllowHeaders: "Origin, Content-Type, Accept",
+	}))
 
 	app.Use(logger.New())
 
