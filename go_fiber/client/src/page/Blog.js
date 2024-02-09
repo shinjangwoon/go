@@ -28,7 +28,7 @@ const Blog = () => {
     
         fetchData();
         return () => {};
-      }, []);
+      }, [params.id]);
 
 
     console.log(apiData);

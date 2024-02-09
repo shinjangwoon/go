@@ -36,3 +36,6 @@ tmp/
 go.sum
 static/
 build/
+pkg/
+.zshrc
+bash_profile
