@@ -38,4 +38,4 @@ static/
 build/
 pkg/
 .zshrc
-bash_profile
+.bash_profile

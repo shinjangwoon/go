@@ -4,8 +4,11 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+
 const Home = () => {
     const [apiData, setApiData] = useState(false); 
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
       const fetchData = async () => {
   
@@ -18,6 +21,7 @@ const Home = () => {
               setApiData(response?.data?.blog_records);
             }
           }
+          setLoading(false);
         } catch (error) {
           console.log(error.response);
         }
@@ -30,6 +34,16 @@ const Home = () => {
   
   
     console.log(apiData);
+
+    if (loading) {
+      return (
+      <>
+        <Container className='spinner'>
+          <Spinner animation='grow' />
+        </Container>
+      </>)
+    }
+
     return (
         <Container>
             <Row>
@@ -51,7 +65,7 @@ const Home = () => {
                 ))}
             </Row>
         </Container>
-    )
-}
+    );
+};
 
 export default Home
