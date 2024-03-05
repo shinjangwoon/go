@@ -39,3 +39,5 @@ build/
 pkg/
 .zshrc
 .bash_profile
+go.work
+go.work.sum

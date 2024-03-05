@@ -16,7 +16,7 @@ func BlogList(c *fiber.Ctx) error {
 		"statusText": "OK",
 		"msg":        "Blog list",
 	}
-	time.Sleep(time.Millisecond * 500)
+	time.Sleep(time.Millisecond * 300)
 	db := database.DBConn
 
 	var records []model.Blog
