@@ -1,6 +1,7 @@
 # CRUD 블로그 만들기 
 -  블로그 목록 표시, 특정 블로그 글 읽기, 블로그 생성, 수정, 삭제 기능을 포함
 -  간단한 블로그 어플리케이션이지만 CRUD 기능을 통해 다양한 작업을 수행
+-  https://www.notion.so/shinjangwoon/W-Golang-React-js-b14cad61acca4e24989f11fcd2eadbe8?pvs=4
 
 ## 구성
 - Front: React.js
