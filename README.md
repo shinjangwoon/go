@@ -6,7 +6,7 @@
 ## 구성
 - Front: React.js
 - Backend: Golang
-   - Golang에서는 Gin, gin-bigo, Iris, Echo, Fiber 등 여러 프레임워크가 있다. 특히 Fiber는 가벼우면서도 빠르기 때문에 Fiber로 진행
+   - Golang에서는 Gin, gin-bigo, Iris, Echo, Fiber 등 여러 프레임워크가 있으며, 특히 Fiber는 가벼우면서도 빠르기 때문에 Fiber로 진행
 - DB: MySQL
    - GORM(ORM)을 통해 go_fiber에서 DB와 연결
 
