@@ -91,7 +91,7 @@ func BlogCreate(c *fiber.Ctx) error {
 	return c.JSON(context)
 }
 
-// Delete a Blog
+// Update a Blog
 func BlogUpdate(c *fiber.Ctx) error {
 
 	context := fiber.Map{
@@ -118,6 +118,10 @@ func BlogUpdate(c *fiber.Ctx) error {
 
 	if err := c.BodyParser(&record); err != nil {
 		log.Println("Error parsing")
+
+		context["msg"] = "Something went wrong"
+		c.Status(400)
+		return c.JSON(context)
 	}
 
 	result := database.DBConn.Save(record)
